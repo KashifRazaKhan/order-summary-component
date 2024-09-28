@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+:root {
+  --Pal_blue: hsl(225, 100%, 94%);
+  --Brigh_blue: hsl(245, 75%, 52%);
+  --Ver_pal_blue: hsl(225, 100%, 98%);
+  --Desaturate_blue: hsl(224, 23%, 55%);
+  --Dar_blue: hsl(223, 47%, 23%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-image: url("images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+.card {
+  width: 450px;
+  height: 700px;
+  border-radius: 30px;
+  background: white;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.section {
+  margin: 51px 48px;
+  text-align: center;
+}
+h1,
+b {
+  font-weight: 900;
+  color: var(--Dar_blue);
+}
+p {
+  color: var(--Desaturate_blue);
+  line-height: 24px;
+  font-weight: 500;
+}
+.plan {
+  height: 97px;
+  border-radius: 10px;
+  background: var(--Ver_pal_blue);
+  display: flex;
+  align-items: center;
+  padding: 25px 20px;
+}
+.plan img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.price {
+  line-height: 25px;
+}
+a:link,
+a:visited {
+  color: var(--Brigh_blue);
+  margin-left: auto;
+}
+a:hover {
+  color: peru;
+  text-decoration: none;
+}
+.btn {
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+  background: var(--Brigh_blue);
+  text-align: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+}
+.btn a:link,
+.btn a:visited {
+  color: white;
+  line-height: 50px;
+  text-decoration: none;
+}
+.btn:hover {
+  background: peru;
+}
+.cancel a:link,
+.cancel a:visited {
+  text-decoration: none;
+  color: var(--Desaturate_blue);
+  font-weight: 900;
+}
+.cancel a:hover {
+  color: var(--Dar_blue);
+}
+
+/* For Mobile */
+@media (max-width: 375px) {
+  body {
+    background-image: url("images/pattern-background-mobile.svg");
+  }
+  .card {
+    width: 325px;
+  }
+  .section {
+    margin: 37px 25px;
+  }
+}
